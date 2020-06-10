@@ -1,0 +1,31 @@
+ //Main Text View
+   TextView maintext;
+   TextView imagetext;
+
+   //Making Splash Screen Time
+    private  int splash_time_out = 2000;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        maintext = (TextView)findViewById(R.id.maintext);
+
+        imagetext = (TextView)findViewById(R.id.imagetext);
+        //Now Making Animation
+        imagetext.setAnimation(AnimationUtils.loadAnimation(MainActivity.this,android.R.anim.fade_in));
+        maintext.setAnimation(AnimationUtils.loadAnimation(MainActivity.this,android.R.anim.fade_in));
+
+        //Making Splash Screen
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Making Activity To Another Activity
+                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        },splash_time_out);
+
+    }
+}

@@ -1,0 +1,27 @@
+/***Universal Tagging****/
+*{
+	margin:0px;
+	padding:0px;
+}
+/*****Main Container****/
+	margin-top:40px;
+.container{
+	width:90%;
+
+}
+.btn-def{
+	margin-top:10px;
+}
+.card{
+
+}
+/**Card Title***/
+.card-title{
+	font-size:22px;
+	
+}
+.add-p{
+	font-size:18px;
+}
+
+You uploaded an APK with an invalid signature (learn more about signing). Error from apksigner: ERROR: JAR_SIG_NO_SIGNATURES: No JAR signatures
